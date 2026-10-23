@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Smart Lights</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+
+    <div class="topbar">
+      <h1>Smart Lights</h1>
+      <div class="topbar-right">
+        <span id="callCounter" class="muted">0 / 20 calls</span>
+        <button id="logoutBtn" class="btn-ghost">Logout</button>
+      </div>
+    </div>
+
+    <div id="limitWarning" class="warning hidden">
+      Approaching API call limit. You have limited calls remaining.
+    </div>
+
+    <div class="card">
+      <h2>AI Command</h2>
+      <div class="row">
+        <input id="commandInput" type="text" placeholder="e.g. set a cozy warm vibe" />
+        <button id="sendCommand">Send</button>
+      </div>
+      <p id="commandResult" class="muted hidden"></p>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <h2>Scene Suggestion</h2>
+        <button id="refreshSuggestion" class="btn-ghost">Refresh</button>
+      </div>
+      <div id="suggestionCard" class="suggestion-card">
+        <p id="sceneName" class="muted">Loading...</p>
+        <button id="applyScene" class="hidden">Apply</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Direct Controls</h2>
+      <div class="row">
+        <button id="turnOn" class="btn-on">On</button>
+        <button id="turnOff" class="btn-off">Off</button>
+      </div>
+      <div class="control-group">
+        <label>Brightness: <span id="brightnessVal">50</span>%</label>
+        <input id="brightnessSlider" type="range" min="0" max="100" value="50" />
+        <button id="setBrightness">Set Brightness</button>
+      </div>
+      <div class="control-group">
+        <label>Color</label>
+        <div class="row">
+          <input id="colorPicker" type="color" value="#ffffff" />
+          <button id="setColor">Set Color</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="js/config.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
