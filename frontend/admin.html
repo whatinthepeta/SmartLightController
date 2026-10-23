@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Smart Lights</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+
+    <div class="topbar">
+      <h1>Admin Dashboard</h1>
+      <button id="logoutBtn" class="btn-ghost">Logout</button>
+    </div>
+
+    <div class="card">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>API Calls</th>
+          </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+      </table>
+    </div>
+
+  </div>
+  <script src="js/config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
