@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+:root {
+    --colour-bg: #1a1a2e;
+    --colour-card: #1a2e4a;
+    --colour-accent: #e94560;
+    --colour-border: #69a7b4; 
+    --colour-text: #eaeaea;
+    --font-type: "Silkscreen", sans-serif;
+    --border-pixel: 3px solid var(--colour-border);
+    --shadow-pixel: 4px 4px 0px var(--colour-border);
+}
+
+body {              
+    font-family: var(--font-type);                                                          
+    min-height: 100vh;                                                          
+    margin: 0;    
+    background-color: var(--colour-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }     
+  
+.card {
+    background: var(--colour-card); border: var(--border-pixel);
+    box-shadow: var(--shadow-pixel); padding: 1.25rem; margin-bottom: 1.25rem;
+    margin-top: 10px;
+}
+
+button {
+    background-color: var(--colour-accent);
+}
+
+input:not([type="color"]) {
+    background-color: #000000;
+    border-radius: 0;
+    font-family: inherit;
+    color: white;
+    border: 1px solid var(--colour-border);
+    padding: 0.5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+input[type="range"] {
+    appearance: none;
+    width: 100%;
+    height: 1.25rem;
+    padding: 0;
+    border: 1px solid var(--colour-border);
+    background-color: #000000;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+input[type="color"] {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 2px;
+    border: 1px solid var(--colour-border);
+    background-color: #000000;
+    cursor: pointer;
+}
+
+ button {                                                                      
+    font-family: inherit;
+    width: 100%;
+    padding: 0.6rem;
+    background-color: var(--colour-accent);                                       
+    color: white;
+    border: 1px solid var(--colour-border);                                     
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 1rem;
+  }                                                                             
+  
+  button:hover {                                                                
+    background-color: #e2909e;
+  }
